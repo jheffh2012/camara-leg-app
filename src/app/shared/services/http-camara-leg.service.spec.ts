@@ -3,6 +3,7 @@ import { TestBed } from '@angular/core/testing';
 import { HttpCamaraLegService } from './http-camara-leg.service';
 import { HttpClient } from '@angular/common/http';
 import { defer } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 export function asyncData<T>(data: T) {
   return defer(() => Promise.resolve(data));
@@ -30,7 +31,7 @@ describe('HttpCamaraLegService', () => {
     const service: HttpCamaraLegService = TestBed.get(HttpCamaraLegService);
     httpClientMock.get.and.returnValue(asyncData(returnValue));
 
-    expect(await service.get('')).toBe(returnValue, 'return value expected');
+    expect(await service.get('').toPromise()).toBe(returnValue, 'return value expected');
     expect(httpClientMock.get.calls.count()).toBe(1, 'get method was called once');
   });
 });
