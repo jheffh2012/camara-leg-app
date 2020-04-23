@@ -1,0 +1,48 @@
+@media screen and (min-width: 601px) {
+	.card-panel{
+		background-color: white;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		flex-grow: 0;
+		flex-shrink: 0;
+		box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.card-panel{
+		background-color: white;
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: flex-start;
+		flex-grow: 0;
+		flex-shrink: 0;
+		box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+	}
+}
+
+.card {
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.card-deputado-item {
+  display: flex;
+	flex-flow: column;
+
+  flex-basis: calc(20% - 12px);
+	margin: 0.5rem 0 1rem 0;
+	transition: box-shadow .25s;
+	border-radius: 3px;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+	margin-left: 10px;
+	text-align: justify;
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 900px) {
+  .card-deputado-item {
+    flex-basis: calc(33% - 12px);
+  }
+}
